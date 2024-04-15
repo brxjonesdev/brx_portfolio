@@ -2,6 +2,7 @@ import React from 'react'
 import Project from '../../components/brx/project'
 import Link from 'next/link'
 import CurrentEvents from '@/components/brx/whatsnew'
+import Simple from '@/content/simple.mdx'
 
 export default function page() {
     return (
@@ -57,6 +58,7 @@ export default function page() {
                     link="https://invoice-app-brx.netlify.app/"
                 />
             </section>
+            <Simple />
         </>
     )
 }

@@ -5,8 +5,10 @@ import Logo from '@/components/brx/logo'
 import Project from '@/components/brx/project'
 import Image from 'next/image'
 import Link from 'next/link'
-
-export default function Home() {
+import { getAllPosts } from '@/lib/mdx-utils'
+export default async function Home() {
+    const posts = await getAllPosts()
+    console.log(posts)
     return (
         <>
             <section className="flex items-center justify-between flex-wrap gap-3">
@@ -51,6 +53,16 @@ export default function Home() {
                 <h1 className="text-md font-syne font-semibold">
                     Recent Posts:
                 </h1>
+                <div className="flex flex-col gap-3">
+                    {posts.map((post) => (
+                        <div key={post.slug}>
+                            <Link href={`/posts/${post.slug}`}>
+                                    {post.title}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+                
             </section>
 
             <section></section>

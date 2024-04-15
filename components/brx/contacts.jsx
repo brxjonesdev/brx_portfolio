@@ -11,13 +11,19 @@ export default function Contacts() {
         <div>
             <div className="flex gap-3 font-inter">
                 <Link href="https://github.com/Braxton-Jones">
-                    <div className="rounded-sm bg-black-500 px-4 py-2 text-sm hover:bg-black-700 ">Github</div>
+                    <div className="rounded-sm bg-black-500 px-4 py-2 text-sm hover:bg-black-700 ">
+                        Github
+                    </div>
                 </Link>
                 <Link href="https://www.linkedin.com/in/braxtonjonesdev/">
-                    <div className="rounded-sm bg-black-500 px-4 py-2 text-sm hover:bg-black-700">LinkedIn</div>
+                    <div className="rounded-sm bg-black-500 px-4 py-2 text-sm hover:bg-black-700">
+                        LinkedIn
+                    </div>
                 </Link>
                 <Link href="https://twitter.com/brxjonesdev">
-                    <div className="rounded-sm bg-black-500 px-4 py-2 text-sm hover:bg-black-700">X</div>
+                    <div className="rounded-sm bg-black-500 px-4 py-2 text-sm hover:bg-black-700">
+                        X
+                    </div>
                 </Link>
             </div>
         </div>

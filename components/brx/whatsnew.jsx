@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CurrentEvents({ children }) {
     return (
-        <section className="rounded-md bg-lavender-500 p-2 text-black">
+        <section className="flex flex-col gap-1 rounded-md bg-lavender-500 px-6 py-3 text-black">
             {children}
         </section>
     )

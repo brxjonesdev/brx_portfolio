@@ -2,12 +2,10 @@ import React from 'react'
 import Project from '../../components/brx/project'
 import Link from 'next/link'
 import CurrentEvents from '@/components/brx/whatsnew'
-import Simple from '@/content/simple.mdx'
 
 export default function page() {
     return (
         <>
-            <main></main>
             <div className="flex flex-col gap-2 font-inter">
                 <Link href="/">
                     <p className="text-black-700 hover:text-black-600">{`<- Home`}</p>
@@ -17,13 +15,13 @@ export default function page() {
                 </h1>
             </div>
             <CurrentEvents>
-                <h1 className="text-md font-syne font-semibold ">
+                <h1 className="font-syne text-xl font-semibold ">
                     {`What I'm working on now:`}
                 </h1>
-                <p className="font-inter ">
+                <p className="font-inter text-sm ">
                     {`I'm currently working on a project called BlossomAI. It's a platform that makes #buildinpublic easier by providing a platform for tracking your progress and sharing it with the world.`}
                 </p>
-                <div className="w-full text-right">
+                <div className="mt-4 w-full  text-right">
                     <Link href="#">
                         <p className="font-inter text-sm underline-offset-2 hover:underline">
                             {` View Project ->`}
@@ -58,7 +56,6 @@ export default function page() {
                     link="https://invoice-app-brx.netlify.app/"
                 />
             </section>
-            <Simple />
         </>
     )
 }

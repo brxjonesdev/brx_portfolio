@@ -30,8 +30,8 @@ export default async function Page({ params }) {
                 prose-heading
                 prose
                 text-white prose-headings:font-syne prose-headings:text-2xl prose-headings:text-black-800
-                                prose-a:text-mauve-500 prose-a:underline prose-a:hover:text-mauve-600
-                                prose-a:font-inter prose-a:text-sm
+                                prose-a:font-inter prose-a:text-sm prose-a:text-mauve-500
+                                prose-a:underline prose-a:hover:text-mauve-600
                 "
                 >
                     {content}

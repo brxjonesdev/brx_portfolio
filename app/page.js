@@ -9,7 +9,6 @@ import { getAllPosts } from '@/lib/mdx-utils'
 import Post from '@/components/brx/post'
 export default async function Home() {
     const posts = await getAllPosts()
-    console.log(posts)
     return (
         <>
             <section className="flex flex-wrap items-center justify-between gap-3">

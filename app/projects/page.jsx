@@ -19,10 +19,15 @@ export default function page() {
                     {`What I'm working on now:`}
                 </h1>
                 <p className="font-inter text-sm ">
-                    {`I'm currently working on a project called BlossomAI. It's a platform that makes #buildinpublic easier by providing a platform for tracking your progress and sharing it with the world.`}
+                    {`
+                    I'm currently working on a project called Chaery. 
+                    It's a platform for keeping track of your relationship with your 
+                    significant other by making it easier to budget, plan dates, and meal prep.
+                     Most importantly, it helps both partners stay on the same page emotionally and logistically. 
+                    `}
                 </p>
                 <div className="mt-4 w-full  text-right">
-                    <Link href="#">
+                    <Link href="https://github.com/Braxton-Jones/chaery">
                         <p className="font-inter text-sm underline-offset-2 hover:underline">
                             {` View Project ->`}
                         </p>

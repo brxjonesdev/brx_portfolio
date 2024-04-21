@@ -5,7 +5,7 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 
 export const getPostBySlug = async (slug) => {
     const cleanSlug = slug.replace(/\.mdx$/, '')
-    const filePath = path.join('app/content', `${cleanSlug}.mdx`)
+    const filePath = path.join(process.cwd(), 'app/content', `${cleanSlug}.mdx`)
     const postContent =  fs.readFileSync(filePath, 'utf8')
 
     const { frontmatter, content } = await compileMDX({

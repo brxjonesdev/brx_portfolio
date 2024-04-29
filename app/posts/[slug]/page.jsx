@@ -1,6 +1,6 @@
 import { getPostBySlug } from '@/lib/mdx-utils'
 import Link from 'next/link'
-import { useMDXComponents } from '@/mdx-component'
+import { useMDXComponents } from '@/mdx-components'
 import { Separator } from '@/components/ui/separator'
 
 export default async function Page({ params }) {
@@ -27,11 +27,12 @@ export default async function Page({ params }) {
             <section className="flex-colfont-inter flex">
                 <div
                     className="
-                prose-heading
-                prose
-                text-white prose-headings:font-syne prose-headings:text-2xl prose-headings:text-black-800
-                                prose-a:font-inter prose-a:text-sm prose-a:text-mauve-500
-                                prose-a:underline prose-a:hover:text-mauve-600
+                prose-lg
+                text-white
+                prose-headings:font-syne
+                prose-headings:text-2xl
+                prose-headings:font-semibold
+                prose-headings:text-white
                 "
                 >
                     {content}

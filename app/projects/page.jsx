@@ -2,6 +2,15 @@ import React from 'react'
 import Project from '../../components/brx/project'
 import Link from 'next/link'
 import CurrentEvents from '@/components/brx/whatsnew'
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 
 export default function page() {
     return (
@@ -14,26 +23,26 @@ export default function page() {
                     All of my projects 💜
                 </h1>
             </div>
-            <CurrentEvents>
-                <h1 className="font-syne text-xl font-semibold ">
-                    {`What I'm working on now:`}
-                </h1>
-                <p className="font-inter text-sm ">
+            <Card className="bg-lavender-600 border-none">
+                <CardHeader>
+                    <CardTitle className="font-syne text-3xl font-medium ">{`What I'm working on now:`}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-md font-inter leading-relaxed ">
                     {`
-                    I'm currently working on a project called Chaery. 
-                    It's a platform for keeping track of your relationship with your 
-                    significant other by making it easier to budget, plan dates, and meal prep.
-                     Most importantly, it helps both partners stay on the same page emotionally and logistically. 
+               I'm currently working on my newest project, Chaery. It's a platform for keeping track of things in your relationship and staying on the same page emotionally and logistically with your significant other. It makes it easier to maintain a budget, plan more dates, and most importantly (to me) decide where you are eating.
                     `}
-                </p>
-                <div className="mt-4 w-full  text-right">
+                </CardContent>
+                <CardFooter className="">
+                    <Button asChild className='w-full bg-black-400 hover:bg-black-600'>
                     <Link href="https://github.com/Braxton-Jones/chaery">
                         <p className="font-inter text-sm underline-offset-2 hover:underline">
-                            {` View Project ->`}
+                            {` View Project on Github ->`}
                         </p>
                     </Link>
-                </div>
-            </CurrentEvents>
+                    </Button>
+                </CardFooter>
+            </Card>
+
             <section className="flex flex-col gap-3">
                 <Project
                     name="BlossomAI"

@@ -9,8 +9,8 @@ export default function AboutMe() {
             <p className="text-md font-inter  font-normal text-black-900">
                 {`
                 Hey! I'm Braxton Jones, a developer based in Annapolis, Maryland. 
-                I love creating web applications that are both functional and user-friendly. 
-                Outside of coding, you can find me making music.
+                I love creating web applications that are both functional and enjoyable to interact with. 
+                As well as coding, I also enjoy creating music in my free time and learning new things about UI Design.
             `}
             </p>
         </div>

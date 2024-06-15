@@ -24,7 +24,7 @@ export default async function Page({ params }) {
                 </div>
             </div>
             <Separator />
-            <section className="flex-col font-inter flex mb-8">
+            <section className="mb-8 flex flex-col font-inter">
                 <div
                     className="
                 prose-lg

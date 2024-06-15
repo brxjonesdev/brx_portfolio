@@ -21,23 +21,58 @@ export default async function Home() {
             </section>
             <section className="flex flex-col gap-3">
                 <h1 className="text-md font-syne font-semibold">
-                    {`Projects I've worked on:`}
+                    {`Some of my projects:`}
                 </h1>
                 <div className="flex flex-col gap-3">
                     <Project
                         name="BlossomAI"
-                        description="Makes #buildinpublic easier by providing a platform for tracking your progress and sharing it with the world."
+                        description="BlossomAI simplifies the #buildinpublic movement by providing a comprehensive platform for tracking your progress and sharing your journey with the world whether you're building a startup or working on a personal project."
                         link="https://blossom-ai-rose.vercel.app/"
+                        techStack={[
+                            'Next.js',
+                            'Typescript',
+                            'TailwindCSS',
+                            'Supabase',
+                            'OpenAI',
+                            'Github API',
+                        ]}
+                    />
+
+                    <Project
+                        name="Chaery"
+                        description="Chaery helps couples stay connected and aligned on their financial goals, events and daily chores. Chaery enhances relationships by offering a dedicated platform for couples to manage and plan their future together."
+                        link="https://chaery.vercel.app/"
+                        techStack={[
+                            'Next.js',
+                            'Typescript',
+                            'TailwindCSS',
+                            'Supabase',
+                        ]}
                     />
                     <Project
-                        name="Audiophile"
-                        description="An e-commerce platform for high-end audio equipment."
-                        link="https://audiophile-brx.netlify.app/"
+                        name={'Aspire'}
+                        description="Aspire is a versatile platform designed for users to create, manage, and share their wishlists with ease and convenience."
+                        link="https://aspire-brx.netlify.app/"
+                        techStack={[
+                            'Next.js',
+                            'Typescript',
+                            'TailwindCSS',
+                            'Supabase',
+                            'Rust'
+                        ]}
                     />
+
                     <Project
-                        name="Matchanym"
-                        description="A little wordgame I made where you match synonyms."
-                        link="https://matchanym-game.netlify.app/"
+                        name={'Crave'}
+                        description="Using a turn-based voting system, Crave is a fun and interactive platform for friends to decide where to eat."
+                        link="https://eatimatum.netlify.app/"
+                        techStack={[
+                            'Next.js',
+                            'Typescript',
+                            'TailwindCSS',
+                            'Supabase',
+                            'Socket.io',
+                        ]}
                     />
                 </div>
                 <div className="w-full text-right">

@@ -22,7 +22,7 @@ export default function Project({
                     <p className="font-inter text-sm text-white-500">
                         {description}
                     </p>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap mt-2">
                         {techStack?.map((tech, index) => (
                             <p
                                 key={index}

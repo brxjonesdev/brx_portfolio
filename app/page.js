@@ -62,18 +62,7 @@ export default async function Home() {
                         ]}
                     />
 
-                    <Project
-                        name={'Crave'}
-                        description="Using a turn-based voting system, Crave is a fun and interactive platform for friends to decide where to eat."
-                        link="https://eatimatum.netlify.app/"
-                        techStack={[
-                            'Next.js',
-                            'Typescript',
-                            'TailwindCSS',
-                            'Supabase',
-                            'Socket.io',
-                        ]}
-                    />
+                  
                 </div>
                 <div className="w-full text-right">
                     <Link href="/projects">

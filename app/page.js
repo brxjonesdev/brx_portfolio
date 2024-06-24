@@ -37,18 +37,6 @@ export default async function Home() {
                             'Github API',
                         ]}
                     />
-
-                    <Project
-                        name="Chaery"
-                        description="Chaery helps couples stay connected and aligned on their financial goals, events and daily chores. Chaery enhances relationships by offering a dedicated platform for couples to manage and plan their future together."
-                        link="https://chaery.vercel.app/"
-                        techStack={[
-                            'Next.js',
-                            'Typescript',
-                            'TailwindCSS',
-                            'Supabase',
-                        ]}
-                    />
                     <Project
                         name={'Aspire'}
                         description="Aspire is a versatile platform designed for users to create, manage, and share their wishlists with ease and convenience."
@@ -61,6 +49,17 @@ export default async function Home() {
                             'Rust'
                         ]}
                     />
+                     <Project
+                    name="Audiophile"
+                    description="Audiophile is a sleek and modern e-commerce platform dedicated to selling high-end audio equipment."
+                    link="https://audiophile-brx.netlify.app/"
+                    techStack={[
+                        'React',
+                        'Node/Express',
+                        'Zustand',
+                        'Sanity.io',
+                    ]}
+                />
 
                   
                 </div>
@@ -78,7 +77,9 @@ export default async function Home() {
                     Recent Posts:
                 </h1>
                 <div className="flex flex-col gap-3">
-                    {posts.map((post) => (
+                    {posts
+                    .sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate))
+                    .map((post) => (
                         <Post key={post.slug} post={post} />
                     ))}
                 </div>

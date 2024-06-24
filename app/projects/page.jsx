@@ -35,7 +35,7 @@ export default function page() {
                 </CardHeader>
                 <CardContent className="text-md font-inter leading-relaxed ">
                 {
-    `I'm working on an open-source alternative to budgeting apps called MisoMoney, which allows for various methods of budgeting such as zero dollar and envelope. Additionally, I'm developing a learning platform called StudioSuede, focused on teaching synthesis techniques.`
+    `I'm currently working on a journaling platform called Respite. Additionally, I'm developing a learning platform called StudioSuede, focused on teaching synthesis techniques.`
 }
 
                 </CardContent>
@@ -44,9 +44,9 @@ export default function page() {
                         asChild
                         className="w-full bg-black-400 hover:bg-black-600"
                     >
-                        <Link href="https://github.com/brxjonesdev/miso_money">
+                        <Link href="https://github.com/brxjonesdev/respite">
                             <p className="font-inter text-sm underline-offset-2 hover:underline">
-                                View <span className="font-semibold text-lavender">MisoMoney</span> on Github -{'>'}
+                                View <span className="font-semibold text-lavender">Respite</span> on Github -{'>'}
                             </p>
                         </Link>
                         </Button>
@@ -64,11 +64,12 @@ export default function page() {
             </Card>
 
             <section className="flex flex-col gap-3">
-                <Project
-                    name="Chaery"
-                    description="Chaery helps couples stay connected and aligned on their financial goals, events and daily chores. Chaery enhances relationships by offering a dedicated platform for couples to manage and plan their future together."
-                    link="https://chaery.vercel.app/"
-                />
+            <Project
+                    name="BlossomAI"
+                    description="BlossomAI simplifies the #buildinpublic movement by providing a comprehensive platform for tracking your progress and sharing your journey with the world whether you're building a startup or working on a personal project."
+                    link="https://blossom-ai-rose.vercel.app/"
+            />
+             
                 <Project
                     name={'Aspire'}
                     description="Aspire is a versatile platform designed for users to create, manage, and share their wishlists with ease and convenience."
@@ -80,11 +81,7 @@ export default function page() {
                     description="Using a turn-based voting system, Crave is a fun and interactive platform for friends to decide where to eat."
                     link="https://eatimatum.netlify.app/"
                 />
-                <Project
-                    name="BlossomAI"
-                    description="BlossomAI simplifies the #buildinpublic movement by providing a comprehensive platform for tracking your progress and sharing your journey with the world whether you're building a startup or working on a personal project."
-                    link="https://blossom-ai-rose.vercel.app/"
-                />
+                
                 <Project
                     name="Audiophile"
                     description="Audiophile is a sleek and modern e-commerce platform dedicated to selling high-end audio equipment."
@@ -95,18 +92,6 @@ export default function page() {
                     name="Matchanym"
                     description="Matchanym is an engaging and educational word game where players match synonyms. It's a fun way to expand your vocabulary and challenge your linguistic skills."
                     link="https://matchanym-game.netlify.app/"
-                />
-
-                <Project
-                    name="Paytrak"
-                    description="Paytrak simplifies the process of creating and tracking invoices for your clients."
-                    link="https://braxton-markdown-app.netlify.app/"
-                />
-
-                <Project
-                    name="Textflow"
-                    description="Textflow is a minimalist writing app designed to help you focus solely on your writing by removing all distractions. It's the perfect tool for writers looking to boost their productivity."
-                    link="https://invoice-app-brx.netlify.app/"
                 />
             </section>
         </>

@@ -14,7 +14,7 @@ export default function AboutMe() {
                 
             </p>
             <p className='text-md font-inter font-normal text-black-900 '>
-            Currently, I&apos;m working on two projects:<br/> <span className='italic text-purple-400'>MisoMoney</span>, an choose-your-own-adventure budgeting app, and <span className='italic text-purple-400'>StudioSuede</span>, a learning platform focused on teaching synthesis techniques.
+            Currently, I&apos;m working on two projects:<br/> <span className='italic text-purple-400'>Respite</span>, an insightful mood, habit and goal journal and <span className='italic text-purple-400'>StudioSuede</span>, a learning platform focused on teaching synthesis techniques.
             </p>
         </div>
     )

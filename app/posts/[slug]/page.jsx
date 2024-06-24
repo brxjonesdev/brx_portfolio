@@ -7,7 +7,7 @@ export default async function Page({ params }) {
     const { meta, content } = await getPostBySlug(params.slug)
     return (
         <>
-            <div className="flex flex-col gap-2 font-inter">
+            <div className="flex flex-col gap-2 font-inter w-full">
                 <div className="flex gap-4">
                     <Link href="/">
                         <p className="text-sm text-black-700">{`Home`}</p>

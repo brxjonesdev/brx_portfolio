@@ -32,7 +32,7 @@ export default function AboutMe() {
         <Card className="rounded-xl border-2 border-black-400 bg-transparent">
             <CardHeader className="">
                 <CardTitle className="font-syne text-xl font-semibold text-white">
-                    Hello, I'm Braxton Jones.
+                    Hello, I&apos;m Braxton Jones.
                 </CardTitle>
                 {/* <CardDescription className="italic font-inter">
                     Full-stack React web developer

@@ -4,10 +4,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 export default function Logo() {
     return (
         <div className="flex items-center gap-1">
-            <Avatar>
+            {/* <Avatar>
                 <AvatarImage src="/image2.png" />
                 <AvatarFallback>BX</AvatarFallback>
-            </Avatar>
+            </Avatar> */}
             <div className="text-white">
                 <h1 className="px-1 font-syne text-lg font-medium">
                     Braxton Jones

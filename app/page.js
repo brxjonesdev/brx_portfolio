@@ -47,7 +47,7 @@ export default async function Home() {
                         </CardTitle>
                         <CardDescription className="font-inter italic">
                             Tech Stack Used:
-                            <br /> Next.js 14, Typescript, OpenAI's GPT-3 API,
+                            <br /> Next.js 14, Typescript, OpenAI&apos;s GPT-3 API,
                             Github API
                             <br />
                             {
@@ -62,13 +62,13 @@ export default async function Home() {
                     </CardHeader>
                     <CardContent className=" space-y-2 px-0 font-inter font-normal text-black-900">
                         <p>
-                            BlossomAI was made to simplify the #buildinpublic
+                           { `BlossomAI was made to simplify the #buildinpublic
                             movement by providing a comprehensive platform for
                             tracking your progress and sharing your journey with
                             the world whether you're building a startup or
                             working on a personal project. I made this project
                             to help me learn the App Router and how to interact
-                            with OpenAI's GPT-3 API.
+                            with OpenAI's GPT-3 API.`}
                         </p>
                     </CardContent>
                 </Card>

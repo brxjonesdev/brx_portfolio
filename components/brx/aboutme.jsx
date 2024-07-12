@@ -40,12 +40,12 @@ export default function AboutMe() {
             </CardHeader>
             <CardContent className=" space-y-2 font-inter font-normal leading-6 text-black-900">
                 <p>
-                    I&apos;m a full-stack React web developer with several years
+                    {`I&apos;m a full-stack React web developer with several years
                     of project experience. I have a passion for creating
                     beautiful, user-friendly interfaces and am always looking
                     for new ways to improve my skills. In my time as a
                     developer, I have worked on a variety of projects, each one
-                    helping me to grow and learn new things.
+                    helping me to grow and learn new things.`}
                 </p>
             </CardContent>
         </Card>

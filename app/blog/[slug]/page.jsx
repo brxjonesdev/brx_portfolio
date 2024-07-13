@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import fs from 'fs'
 import Markdown from 'react-markdown'
@@ -12,15 +13,6 @@ import {
     CardTitle,
   } from "@/components/ui/card"
   
-
-export const generateStaticParams = async () => {
-    const posts = getPostsMetadata()
-    return posts.map(post => ({
-        params: {
-            slug: post.slug
-        }
-    }))
-}
 const getPostsContent = (slug) => {
     const folder = 'brx_posts/'
     const file = `${folder}${slug}.md`

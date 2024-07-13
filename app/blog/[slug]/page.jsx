@@ -13,7 +13,7 @@ import {
   } from "@/components/ui/card"
   
 export const getPostsContent = (slug) => {
-    const folder = '../../../brx_posts'
+    const folder = 'brx_posts/'
     const file = `${folder}/${slug}.md`
     const content = fs.readFileSync(file, 'utf8')
     const matterResult = matter(content)
@@ -37,7 +37,7 @@ export default function page(props) {
     <Card className="bg-mauve-500">
         <CardHeader>
             <CardTitle className="font-syne">{post.data.title}</CardTitle>
-            <CardDescription className="font-inter italic text-right">{post.data.date}</CardDescription>
+            <CardDescription className="font-inter italic">{post.data.description}</CardDescription>
         </CardHeader>
     </Card>
     <article className='prose prose-zinc prose-invert font-inter mb-8  prose-headings:text-mauve-500 prose-headings:font-syne'>

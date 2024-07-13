@@ -12,6 +12,8 @@ import {
     CardTitle,
   } from "@/components/ui/card"
   
+
+
 const getPostsContent = (slug) => {
     const folder = 'brx_posts/'
     const file = `${folder}${slug}.md`
@@ -27,7 +29,7 @@ export default function page(props) {
     <Card className="bg-mauve-500">
         <CardHeader>
             <CardTitle className="font-syne">{post.data.title}</CardTitle>
-            {/* <CardDescription className="font-inter italic text-right">{post.data.date}</CardDescription> */}
+            <CardDescription className="font-inter italic text-right">{post.data.date}</CardDescription>
         </CardHeader>
     </Card>
     <article className='prose prose-zinc prose-invert font-inter mb-8  prose-headings:text-mauve-500 prose-headings:font-syne'>

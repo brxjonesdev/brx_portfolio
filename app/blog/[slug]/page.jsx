@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import fs from 'fs'
 import Markdown from 'react-markdown'

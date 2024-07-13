@@ -32,7 +32,7 @@ export default function AboutMe() {
         <Card className="rounded-xl border-2 border-black-400 bg-transparent">
             <CardHeader className="">
                 <CardTitle className="font-syne text-xl font-semibold text-white">
-                    Hello, I&apos;m Braxton Jones.
+                    {`Hello, I'm Braxton Jones.`}
                 </CardTitle>
                 {/* <CardDescription className="italic font-inter">
                     Full-stack React web developer
@@ -40,7 +40,7 @@ export default function AboutMe() {
             </CardHeader>
             <CardContent className=" space-y-2 font-inter font-normal leading-6 text-black-900">
                 <p>
-                    {`I&apos;m a full-stack React web developer with several years
+                    {`I'm a full-stack React web developer with several years
                     of project experience. I have a passion for creating
                     beautiful, user-friendly interfaces and am always looking
                     for new ways to improve my skills. In my time as a

@@ -1,6 +1,8 @@
-
-
-# The Story So Far: Cybersecurity to Self-Taught Web Development
+---
+title: 'The Story So Far: Cybersecurity to Self-Taught Web Development'
+date: '2024-02-01'
+description: 'My journey from cybersecurity to self-taught web development.'
+---
 
 ## Introduction
 

@@ -11,7 +11,7 @@ import {
     CardHeader,
     CardTitle,
 } from '../components/ui/card'
-import BlogPosts from '../components/brx/blogpost'
+import BlogPosts from '../components/brx/blogposts'
 import {
     Dialog,
     DialogContent,
@@ -97,7 +97,7 @@ export default async function Home() {
             </section>
             <div className="my-2 h-1 w-full rounded-lg bg-mauve-600"></div>
 
-            <section className="flex flex-col gap-3">
+            <section className="flex flex-col gap-2">
                 <BlogPosts />
              
             </section>

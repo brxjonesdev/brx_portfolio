@@ -14,7 +14,7 @@ import {
   
 export const getPostsContent = (slug) => {
     const folder = 'brx_posts/'
-    const file = `${folder}/${slug}.md`
+    const file = `${folder}${slug}.md`
     const content = fs.readFileSync(file, 'utf8')
     const matterResult = matter(content)
     return matterResult

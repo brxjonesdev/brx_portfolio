@@ -29,21 +29,22 @@ export default function Projects({ projects }) {
     const [selectedProject, setSelectedProject] = useState(null)
     let badgeColor
 
-    if(selectedProject){
-    switch (selectedProject.status) {
-        case 'Deployed':
-            badgeColor = 'bg-green-500' // or any color representing completion
-            break
-        case 'On Hiatus':
-            badgeColor = 'bg-teal-500' // or any color representing ongoing work
-            break
-        case 'In Progress':
-            badgeColor = 'bg-lavender-500' // or any color representing pending status
-            break
-        default:
-            badgeColor = 'bg-green-500' // or any color for unknown status
-            break
-    }}
+    if (selectedProject) {
+        switch (selectedProject.status) {
+            case 'Deployed':
+                badgeColor = 'bg-green-500' // or any color representing completion
+                break
+            case 'On Hiatus':
+                badgeColor = 'bg-teal-500' // or any color representing ongoing work
+                break
+            case 'In Progress':
+                badgeColor = 'bg-lavender-500' // or any color representing pending status
+                break
+            default:
+                badgeColor = 'bg-green-500' // or any color for unknown status
+                break
+        }
+    }
     return (
         <section className="flex grid-cols-3 grid-rows-5 flex-col-reverse gap-4 pt-3 md:grid ">
             {selectedProject ? (
@@ -90,8 +91,10 @@ export default function Projects({ projects }) {
                     </CardContent>
                 </Card>
             ) : (
-                <div className="col-span-2 row-span-5 flex flex-col rounded-sm border-none bg-mauve-500 min-h-[300px] items-center justify-center">
-                    <p className="font-inter text-sm md:text-md">Select one of my projects to get more info!</p>
+                <div className="col-span-2 row-span-5 flex min-h-[300px] flex-col items-center justify-center rounded-sm border-none bg-mauve-500">
+                    <p className="md:text-md font-inter text-sm">
+                        Select one of my projects to get more info!
+                    </p>
                 </div>
             )}
 

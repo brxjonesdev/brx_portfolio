@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             <body
                 className={`${inter.variable} ${syne.variable} flex  justify-center  bg-black-100 text-white`}
             >
-                <main className="min-w-2xl m-5 flex max-w-2xl flex-col gap-5 ">
+                <main className="min-w-3xl m-5 flex max-w-3xl flex-col gap-5 ">
                     {children}
                 </main>
             </body>

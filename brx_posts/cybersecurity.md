@@ -1,7 +1,7 @@
 ---
-title: 'The Story So Far: Cybersecurity to Self-Taught Web Development'
+title: 'Cybersecurity to Self-Taught Web Development'
 date: '2024-02-01'
-description: 'My journey from cybersecurity to self-taught web development.'
+description: 'Follow my transition from a career in cybersecurity to self-taught web development, exploring the key experiences and skills acquired along the way that shaped my journey into coding and web application design.'
 ---
 
 ## Introduction
@@ -29,4 +29,4 @@ Through trial and error, I learned the importance of clean code, version control
 ## Looking Ahead
 
 As I keep improving my skills and trying out new technologies, I am reminded of the many opportunities that are out there. With every obstacle I overcome and every goal I achieve, I get closer to my dream of making a real difference in software development.
-My journey as a self-taught developer has been truly life-changing—a proof of how determination, enthusiasm, and the constant pursuit of knowledge could lead to success. While the future may be uncertain, I'm excited about the adventures that lie ahead.
+My journey as a self-taught developer has been truly life changing and proof of how determination, enthusiasm, and the constant pursuit of knowledge could lead to success. While the future may be uncertain, I'm excited about the adventures that lie ahead.

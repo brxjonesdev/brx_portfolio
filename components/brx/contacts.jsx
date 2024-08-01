@@ -31,18 +31,7 @@ export default function Contacts() {
                         />
                         <p className="font-medium">LinkedIn</p>
                     </div>
-                </Link>
-                <Link href="https://twitter.com/brxjonesdev">
-                    <div className="flex items-center justify-between gap-3 rounded-sm bg-black-500  px-4 py-2 text-sm hover:bg-black-600">
-                        <Image
-                            src={twitter}
-                            alt="Twitter"
-                            width={20}
-                            height={20}
-                        />
-                        <p className="font-medium">Twitter/X</p>
-                    </div>
-                </Link>
+                </Link>        
             </div>
         </div>
     )

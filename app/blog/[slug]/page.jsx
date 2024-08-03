@@ -65,7 +65,7 @@ export default function Page(props) {
                     </CardDescription>
                 </CardHeader>
             </Card>
-            <article className="prose prose-zinc prose-invert mb-8 font-inter prose-headings:font-syne prose-headings:text-mauve-500 min-w-full">
+            <article className="prose prose-zinc prose-invert mb-8 min-w-full font-inter prose-headings:font-syne prose-headings:text-mauve-500">
                 <Markdown>{post.content}</Markdown>
             </article>
         </>

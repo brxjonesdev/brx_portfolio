@@ -31,7 +31,7 @@ export default function Contacts() {
                         />
                         <p className="font-medium">LinkedIn</p>
                     </div>
-                </Link>        
+                </Link>
             </div>
         </div>
     )

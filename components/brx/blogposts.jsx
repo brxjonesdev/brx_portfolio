@@ -22,7 +22,7 @@ export default function BlogPost() {
                 >
                     <div className="flex gap-5 p-5">
                         <div className="h-full min-w-2 rounded-md bg-mauve-500" />
-                        <div className='space-y-2'>
+                        <div className="space-y-2">
                             <div className="flex items-center justify-between">
                                 <CardTitle className="text-md font-syne text-white">
                                     {post.title}

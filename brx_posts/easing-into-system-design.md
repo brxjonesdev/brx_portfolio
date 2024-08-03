@@ -17,8 +17,6 @@ Here’s an example of what a production app's system might look like.
 
 ![Example High-Level Overview of a Production App.](/Diagram.png)
 
-
-
 Here’s a breakdown of the process:
 
 1. Code is written by you or your team.
@@ -299,5 +297,3 @@ To ensure your database is scalable and performant, consider the following techn
 ## Whew, that was a lot.
 
 Designing and building a web application involves a meticulous process that requires careful planning and understanding of several key concepts. From establishing a solid system design blueprint to addressing the intricacies of networking, API design, caching, load balancing, and database management, each aspect plays a crucial role in ensuring your application performs efficiently and scales effectively.
-
-As we move forward, the next post will delve deeper into applying these concepts to the development of Muse—a platform dedicated to connecting music artists with their fans. We’ll explore the specific system architecture for Muse, providing a hands-on example of how these principles come together in a real-world application.

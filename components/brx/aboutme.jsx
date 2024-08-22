@@ -40,13 +40,15 @@ export default function AboutMe() {
             </CardHeader>
             <CardContent className="space-y-2 font-inter font-normal leading-6 text-black-900">
                 <p>
-                    {`I'm a full-stack React web developer with several years of project experience. I have a passion for creating beautiful, user-friendly interfaces and am always looking for new ways to improve my skills. In my time as a developer, I have worked on a variety of projects, each one helping me to grow and learn new things.`}
+                    {`I'm a full-stack React web developer with several years of project experience. 
+                    I have a passion for creating beautiful, user-friendly interfaces and am always 
+                    looking for new ways to improve my skills. In my time as a developer, I have worked
+                     on a variety of projects, each one helping me to grow and learn new things.`}
                 </p>
                 <p>
-                    {`Currently, I'm working on an exciting project called Muse, a platform designed to help artists interact with fans, sell music and merch, and promote themselves. I'm building Muse using Next.js 14, TailwindCSS, Typescript, and a variety of other technologies. You can follow along with my progress here -> `}
-                    <Link href="https://muse-ten-henna.vercel.app/" className='italic text-mauve-600 hover:underline'>
-                     Muse
-                    </Link>
+                    {`Currently, I'm working on an exciting project called Stellar, 
+                    a polling app designed for easy use and sharing on social
+                     media platforms.`}
                 </p>
             </CardContent>
         </Card>

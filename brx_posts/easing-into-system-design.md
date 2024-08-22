@@ -1,5 +1,5 @@
 ---
-title: 'Building Muse: Easing into System Design'
+title: 'Easing into System Design'
 date: '2024-07-24'
 description: "Let's review fundamentals of system design, covering key concepts like architecture, networking, API design, caching, load balancing, and database management.
 "

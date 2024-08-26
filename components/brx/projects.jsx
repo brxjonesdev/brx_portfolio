@@ -26,7 +26,9 @@ import {
 } from '@/components/ui/select'
 
 export default function Projects({ projects }) {
-    const [selectedProject, setSelectedProject] = useState(null)
+    const [selectedProject, setSelectedProject] = useState(
+        projects.length > 0 ? projects[0] : null
+    )
     let badgeColor
 
     if (selectedProject) {
@@ -46,9 +48,35 @@ export default function Projects({ projects }) {
         }
     }
     return (
-        <section className="flex grid-cols-3 grid-rows-5 flex-col-reverse gap-4 pt-3 md:grid ">
+        <section className="space-y-2">
+            <h2 className="font-syne text-xl font-semibold">Other Projects</h2>
+            <Select
+                onValueChange={(value) =>
+                    setSelectedProject(
+                        projects.find((project) => project.id === value)
+                    )
+                }
+            >
+                <div>
+                <SelectTrigger className="w-full font-syne font-semibold text-black-100 bg-mauve-700 border-none">
+                    <SelectValue placeholder="Select Project" />
+                </SelectTrigger>
+                <p className='font-inter text-sm ml-3 mb-6 mt-1 '>Select a project to learn more.</p>
+                </div>
+                <SelectContent>
+                    {projects.map((project) => (
+                        <SelectItem
+                            key={project.id}
+                            value={project.id}
+                            className="font-syne"
+                        >
+                            {project.name}
+                        </SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
             {selectedProject ? (
-                <Card className="col-span-2 row-span-5 flex flex-col border-none bg-mauve-500">
+                <Card className="col-span-2 row-span-5 flex flex-col border-none bg-mauve-800 ">
                     <CardHeader className="space-y-3">
                         <div className="flex items-center justify-between">
                             <CardTitle className="font-syne">
@@ -85,7 +113,7 @@ export default function Projects({ projects }) {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <p className="font-inter text-sm leading-relaxed text-muted-foreground md:text-base">
+                        <p className="font-inter text-sm leading-relaxed md:text-base">
                             {selectedProject.description}
                         </p>
                     </CardContent>
@@ -97,52 +125,6 @@ export default function Projects({ projects }) {
                     </p>
                 </div>
             )}
-
-            <div className="col-start-3 row-span-5 hidden gap-3 rounded bg-black-500 p-3 md:flex md:flex-col">
-                {projects.map((project) => (
-                    <button
-                        className="rounded-lg bg-black-400 p-3 font-syne font-semibold text-white-800 hover:bg-mauve-500"
-                        key={project.id}
-                        onClick={() => setSelectedProject(project)}
-                    >
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger className="w-full">
-                                    <p className="text-xs md:text-base">
-                                        {project.name}
-                                    </p>
-                                </TooltipTrigger>
-                                <TooltipContent className="hidden md:block">
-                                    {project.tagline}
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-                    </button>
-                ))}
-            </div>
-
-            <Select
-                onValueChange={(value) =>
-                    setSelectedProject(
-                        projects.find((project) => project.id === value)
-                    )
-                }
-            >
-                <SelectTrigger className="w-full font-syne font-semibold md:hidden">
-                    <SelectValue placeholder="Select Project" />
-                </SelectTrigger>
-                <SelectContent>
-                    {projects.map((project) => (
-                        <SelectItem
-                            key={project.id}
-                            value={project.id}
-                            className="font-inter"
-                        >
-                            {project.name}
-                        </SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
         </section>
     )
 }

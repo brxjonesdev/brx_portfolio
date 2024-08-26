@@ -22,6 +22,8 @@ import {
 } from '../components/ui/dialog'
 import Projects from '../components/brx/projects'
 import { prisma } from '@/lib/prisma'
+import Image from 'next/image'
+import BlossomImage from '@/public/Blossom-1.png'
 
 export default async function Home() {
     const projects = await prisma.project.findMany()
@@ -36,8 +38,7 @@ export default async function Home() {
                 <AboutMe />
             </section>
             <section className="flex flex-col">
-                <Card className=" rounded-xl border-b-2 border-t-2 border-none border-gray-400 bg-transparent">
-                    {/* Featured Project BlossomaI */}
+                <Card className=" flex flex-wrap rounded-xl border-b-2 border-t-2 border-none border-gray-400 bg-transparent">
                     <CardHeader className="text-md px-0 font-syne font-semibold">
                         <CardTitle className="font-syne text-xl font-semibold text-white">
                             Featured Project:{' '}
@@ -72,30 +73,10 @@ export default async function Home() {
                         </p>
                     </CardContent>
                 </Card>
-                <div className="w-full text-right">
-                    <Dialog>
-                        <DialogTrigger className="font-inter text-sm text-teal-300 underline-offset-2 hover:underline">{` View all projects. ->`}</DialogTrigger>
-                        <DialogContent className="max-w-4xl rounded-xl border-none bg-black-100 text-black-300">
-                            <DialogHeader>
-                                <DialogTitle
-                                    className=" text-left font-syne text-2xl font-extrabold text-mauve-500
-                                "
-                                >
-                                    All Projects
-                                </DialogTitle>
-                                <DialogDescription className="text-left font-inter">
-                                    All of my work in one place.
-                                </DialogDescription>
-                                <>
-                                    {/* pass projects objects to here */}
-                                    <Projects projects={projects} />
-                                </>
-                            </DialogHeader>
-                        </DialogContent>
-                    </Dialog>
-                </div>
+                <div className="my-6 h-1 w-full rounded-lg bg-mauve-600"></div>
+                <Projects projects={projects} />
             </section>
-            <div className="my-2 h-1 w-full rounded-lg bg-mauve-600"></div>
+
 
             <section className="">
                 <BlogPosts />

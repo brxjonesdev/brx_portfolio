@@ -38,41 +38,41 @@ export default async function Home() {
                 <AboutMe />
             </section>
             <section className="flex flex-col">
-                <Card className=" flex flex-wrap rounded-xl border-b-2 border-t-2 border-none border-gray-400 bg-transparent">
-                    <CardHeader className="text-md px-0 font-syne font-semibold">
-                        <CardTitle className="font-syne text-xl font-semibold text-white">
-                            Featured Project:{' '}
-                            <span className="italic text-mauve-600">
-                                BlossomAI
-                            </span>
-                        </CardTitle>
-                        <CardDescription className="font-inter italic">
-                            Tech Stack Used:
-                            <br /> Next.js 14, Typescript, OpenAI&apos;s GPT-3
-                            API, Github API
-                            <br />
-                            {
-                                <Link
-                                    href="#"
-                                    className="text-mauve-500 hover:underline"
-                                >
-                                    {' View the project here ->'}
-                                </Link>
-                            }
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent className=" space-y-2 px-0 font-inter font-normal text-black-900">
-                        <p>
-                            {`BlossomAI was made to simplify the #buildinpublic
-                            movement by providing a comprehensive platform for
-                            tracking your progress and sharing your journey with
-                            the world whether you're building a startup or
-                            working on a personal project. I made this project
-                            to help me learn the App Router and how to interact
-                            with OpenAI's GPT-3 API.`}
-                        </p>
-                    </CardContent>
-                </Card>
+            <Card className="flex flex-wrap rounded-xl border-b-2 border-t-2 border-none border-gray-400 bg-transparent">
+    <CardHeader className="text-md px-0 font-syne font-semibold">
+        <CardTitle className="font-syne text-xl font-semibold text-white">
+            Featured Project:{' '}
+            <span className="italic text-mauve-600">Beatmap</span>
+        </CardTitle>
+        <CardDescription className="font-inter italic">
+            Tech Stack Used:
+            <br /> Next.js, TypeScript, Genius API, Dagre, React Flow
+            <br />
+            {
+                <Link
+                    href="https://beatmap-brxjonesdev.netlify.app/"
+                    className="text-mauve-500 hover:underline"
+                >
+                    {' View the project here ->'}
+                </Link>
+            }
+        </CardDescription>
+    </CardHeader>
+    <CardContent className="space-y-2 px-0 font-inter font-normal text-black-900">
+    <p>
+    {`Beatmap visualizes the connections between songs, artists, producers, and writers, helping users explore the creative networks behind the music they love.`}
+</p>
+<p>
+    {`Building Beatmap enhanced my skills in graph visualization with React Flow and Dagre, and allowed me to integrate the Genius API to provide rich song metadata.`}
+</p>
+<p>
+    {`Beatmap celebrates the artistry and collaboration in music, making it easier for fans to discover the stories and people behind their favorite tracks.`}
+</p>
+
+
+    </CardContent>
+</Card>
+
                 <div className="my-6 h-1 w-full rounded-lg bg-mauve-600"></div>
                 <Projects projects={projects} />
             </section>

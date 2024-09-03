@@ -15,117 +15,51 @@ import {
     TooltipTrigger,
 } from '@/components/ui/tooltip'
 import { useState } from 'react'
-import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select'
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+  } from "@/components/ui/accordion"
+  
 
 export default function Projects({ projects }) {
-    const [selectedProject, setSelectedProject] = useState(
-        projects.length > 0 ? projects[0] : null
-    )
-    let badgeColor
-
-    if (selectedProject) {
-        switch (selectedProject.status) {
-            case 'Deployed':
-                badgeColor = 'bg-green-500' // or any color representing completion
-                break
-            case 'On Hiatus':
-                badgeColor = 'bg-teal-500' // or any color representing ongoing work
-                break
-            case 'In Progress':
-                badgeColor = 'bg-lavender-500' // or any color representing pending status
-                break
-            default:
-                badgeColor = 'bg-green-500' // or any color for unknown status
-                break
-        }
-    }
+ 
     return (
-        <section className="space-y-2">
-            <h2 className="font-syne text-xl font-semibold">Other Projects</h2>
-            <Select
-                onValueChange={(value) =>
-                    setSelectedProject(
-                        projects.find((project) => project.id === value)
-                    )
-                }
-            >
-                <div>
-                <SelectTrigger className="w-full font-syne font-semibold text-black-100 bg-mauve-700 border-none">
-                    <SelectValue placeholder="Select Project" />
-                </SelectTrigger>
-                <p className='font-inter text-sm ml-3 mb-6 mt-1 '>Select a project to learn more.</p>
+        <Accordion type="single" collapsible className="w-full space-y-10">
+        {projects.map((project) => (
+          <AccordionItem key={project.id} value={project.id}>
+            <AccordionTrigger className="text-left hover:no-underline hover:text-purple-300 bg-white/10 px-4 rounded-t-md border-b-0">
+              <div>
+                <h3 className="text-xl font-semibold font-syne">{project.title}</h3>
+                <p className="text-sm text-muted-foreground font-inter">{project.description}</p>
+              </div>
+            </AccordionTrigger>
+            <AccordionContent >
+              <div className="px-4 space-y-4 mt-4">
+                <p className='font-inter text-md'>{project.longDescription}</p>            
+                <div className="flex gap-4">
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className='bg-purple-400 border-none text-black-300 font-syne'>
+                      <GithubIcon className="mr-2 h-4 w-4" />
+                      GitHub
+                    </a>
+                  </Button>
+                  {project.liveUrl && (
+                    <Button variant="outline" size="sm" asChild >
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className='bg-purple-400 border-none text-black-300 font-syne'>
+                        <GlobeIcon className="mr-2 h-4 w-4" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
-                <SelectContent>
-                    {projects.map((project) => (
-                        <SelectItem
-                            key={project.id}
-                            value={project.id}
-                            className="font-syne"
-                        >
-                            {project.name}
-                        </SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
-            {selectedProject ? (
-                <Card className="col-span-2 row-span-5 flex flex-col border-none bg-mauve-800 ">
-                    <CardHeader className="space-y-3">
-                        <div className="flex items-center justify-between">
-                            <CardTitle className="font-syne">
-                                {selectedProject.name}
-                            </CardTitle>
-                            <Badge
-                                variant="secondary"
-                                className={`${badgeColor} font-inter text-green-50`}
-                            >
-                                {selectedProject.status}
-                            </Badge>
-                        </div>
-                        <div className="mt-4 flex items-center gap-4 font-inter">
-                            {selectedProject.githubLink && (
-                                <Link
-                                    href={selectedProject.githubLink}
-                                    className="flex items-center gap-2 text-sm"
-                                    prefetch={false}
-                                >
-                                    <GithubIcon className="h-4 w-4" />
-                                    GitHub
-                                </Link>
-                            )}
-                            {selectedProject.websiteLink && (
-                                <Link
-                                    href={selectedProject.websiteLink}
-                                    className="flex items-center gap-2 text-sm"
-                                    prefetch={false}
-                                >
-                                    <GlobeIcon className="h-4 w-4" />
-                                    Website
-                                </Link>
-                            )}
-                        </div>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="font-inter text-sm leading-relaxed md:text-base">
-                            {selectedProject.description}
-                        </p>
-                    </CardContent>
-                </Card>
-            ) : (
-                <div className="col-span-2 row-span-5 flex min-h-[300px] flex-col items-center justify-center rounded-sm border-none bg-mauve-500">
-                    <p className="md:text-md font-inter text-sm">
-                        Select one of my projects to get more info!
-                    </p>
-                </div>
-            )}
-        </section>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     )
 }
 
@@ -189,3 +123,5 @@ function XIcon(props) {
         </svg>
     )
 }
+
+

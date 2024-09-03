@@ -20,35 +20,18 @@ import Link from 'next/link'
 
 export default function AboutMe() {
     return (
-        // <div className="flex flex-col gap-1 text-white">
-        //     <h2 className="text-md font-syne font-semibold text-white">
-        //         {`About Me:`}
-        //     </h2>
-        //     <p className="text-md font-inter font-normal text-black-900 ">
-        //         Hey! I&apos;m Braxton Jones, a full-stack React web developer with several years of project experience.
-        //     </p>
-
-        // </div>
         <Card className="rounded-xl border-2 border-black-400 bg-transparent">
             <CardHeader className="">
                 <CardTitle className="font-syne text-xl font-semibold text-white">
                     {`Hello, I'm Braxton Jones.`}
                 </CardTitle>
-                {/* <CardDescription className="italic font-inter">
-                    Full-stack React web developer
-                </CardDescription> */}
+    
             </CardHeader>
             <CardContent className="space-y-2 font-inter font-normal leading-6 text-black-900">
-                <p>
-                    {`I'm a full-stack React web developer with several years of project experience. 
-                    I have a passion for creating beautiful, user-friendly interfaces and am always 
-                    looking for new ways to improve my skills. In my time as a developer, I have worked
-                     on a variety of projects, each one helping me to grow and learn new things.`}
-                </p>
-                <p>
-                    {`Currently, I'm working on an exciting project called Stellar, 
-                    a polling app designed for easy use and sharing on social
-                     media platforms.`}
+                <p>     
+                A versatile developer with a passion for creating engaging and entertaining user experiences, 
+                I’m currently focused on Starplot. It's a host of tools and resources for helping turn your ideas from concept to a tanigible reality.
+                You can learn about how I'm doing that here <a href="https://github.com/brxjonesdev/starplot" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] font-syne text-md">Starplot</a>.
                 </p>
             </CardContent>
         </Card>

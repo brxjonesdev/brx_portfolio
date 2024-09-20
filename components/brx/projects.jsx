@@ -21,45 +21,69 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-  } from "@/components/ui/accordion"
-  
+} from '@/components/ui/accordion'
 
 export default function Projects({ projects }) {
- 
     return (
-        <Accordion type="single" collapsible className="w-full space-y-10">
-        {projects.map((project) => (
-          <AccordionItem key={project.id} value={project.id}>
-            <AccordionTrigger className="text-left hover:no-underline hover:text-purple-300 bg-white/10 px-4 rounded-t-md border-b-0">
-              <div>
-                <h3 className="text-xl font-semibold font-syne">{project.title}</h3>
-                <p className="text-sm text-muted-foreground font-inter">{project.description}</p>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent >
-              <div className="px-4 space-y-4 mt-4">
-                <p className='font-inter text-md'>{project.longDescription}</p>            
-                <div className="flex gap-4">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className='bg-purple-400 border-none text-black-300 font-syne'>
-                      <GithubIcon className="mr-2 h-4 w-4" />
-                      GitHub
-                    </a>
-                  </Button>
-                  {project.liveUrl && (
-                    <Button variant="outline" size="sm" asChild >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className='bg-purple-400 border-none text-black-300 font-syne'>
-                        <GlobeIcon className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
-                  )}
-                </div>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+        <Accordion
+            type="single"
+            collapsible
+            className="w-full space-y-10 border-none"
+        >
+            {projects
+                .sort((a, b) => b.id - a.id)
+                .map((project) => (
+                    <AccordionItem key={project.id} value={project.id}>
+                        <AccordionTrigger className="rounded border-b-0 bg-white/10 px-4 text-left hover:text-purple-300 hover:no-underline">
+                            <div>
+                                <h3 className="font-syne text-xl font-semibold">
+                                    {project.title}
+                                </h3>
+                                <p className="font-inter text-sm text-muted-foreground">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                            <div className="mt-4 space-y-4 ">
+                                <p className="text-md rounded bg-white/5 p-4 font-inter leading-7">
+                                    {project.longDescription}
+                                </p>
+                                <div className="flex gap-4">
+                                    <Button variant="outline" size="sm" asChild>
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="border-none bg-purple-400 font-syne text-black-300"
+                                        >
+                                            <GithubIcon className="mr-2 h-4 w-4" />
+                                            GitHub
+                                        </a>
+                                    </Button>
+                                    {project.liveUrl && (
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            asChild
+                                        >
+                                            <a
+                                                href={project.liveUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="border-none bg-purple-400 font-syne text-black-300"
+                                            >
+                                                <GlobeIcon className="mr-2 h-4 w-4" />
+                                                Live Demo
+                                            </a>
+                                        </Button>
+                                    )}
+                                </div>
+                            </div>
+                        </AccordionContent>
+                    </AccordionItem>
+                ))}
+        </Accordion>
     )
 }
 
@@ -123,5 +147,3 @@ function XIcon(props) {
         </svg>
     )
 }
-
-

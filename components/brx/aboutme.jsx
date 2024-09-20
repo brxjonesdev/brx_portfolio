@@ -25,13 +25,13 @@ export default function AboutMe() {
                 <CardTitle className="font-syne text-xl font-semibold text-white">
                     {`Hello, I'm Braxton Jones.`}
                 </CardTitle>
-    
             </CardHeader>
             <CardContent className="space-y-2 font-inter font-normal leading-6 text-black-900">
-                <p>     
-                A versatile developer with a passion for creating engaging and entertaining user experiences, 
-                I’m currently focused on Starplot. It's a host of tools and resources for helping turn your ideas from concept to a tanigible reality.
-                You can learn about how I'm doing that here <a href="https://github.com/brxjonesdev/starplot" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] font-syne text-md">Starplot</a>.
+                <p>
+                    A versatile developer based in southern Maryland with a
+                    passion for creating engaging and entertaining user
+                    experiences. Currently, I'm focused on building applications
+                    that involve my love for music and technology.
                 </p>
             </CardContent>
         </Card>

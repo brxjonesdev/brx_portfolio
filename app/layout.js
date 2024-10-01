@@ -2,6 +2,7 @@ import { Syne, Inter } from 'next/font/google'
 import Logo from '@/components/brx/logo'
 import Contacts from '@/components/brx/contacts'
 import './globals.css'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const inter = Inter({
     subsets: ['latin'],
@@ -22,6 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <GoogleTagManager gtmId="GTM-PR46VX4Q" />
             <body
                 className={`${inter.variable} ${syne.variable} flex  justify-center  bg-black-100 text-white`}
             >
